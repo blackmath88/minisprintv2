@@ -112,23 +112,23 @@
 </div>
 <nav class="flex-1 flex flex-col gap-1">
 <!-- Active Navigation: Dashboard -->
-<a class="flex items-center gap-4 py-3 px-8 bg-white text-[#4338CA] rounded-r-full shadow-sm active:scale-[0.98] transition-transform" href="index.html">
+<a class="flex items-center gap-4 py-3 px-8 bg-white text-[#4338CA] rounded-r-full shadow-sm active:scale-[0.98] transition-transform" href="index.html" data-nav>
 <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
 <span>Dashboard</span>
 </a>
-<a class="flex items-center gap-4 py-3 px-8 text-[#1b1c1a]/70 hover:translate-x-1 hover:text-[#4338CA] transition-all" href="#">
+<a class="flex items-center gap-4 py-3 px-8 text-[#1b1c1a]/70 hover:translate-x-1 hover:text-[#4338CA] transition-all" href="personas.html" data-nav>
 <span class="material-symbols-outlined" data-icon="groups">groups</span>
 <span>Personas</span>
 </a>
-<a class="flex items-center gap-4 py-3 px-8 text-[#1b1c1a]/70 hover:translate-x-1 hover:text-[#4338CA] transition-all" href="#">
+<a class="flex items-center gap-4 py-3 px-8 text-[#1b1c1a]/70 hover:translate-x-1 hover:text-[#4338CA] transition-all" href="interviews.html" data-nav>
 <span class="material-symbols-outlined" data-icon="record_voice_over">record_voice_over</span>
 <span>Pre-Interview</span>
 </a>
-<a class="flex items-center gap-4 py-3 px-8 text-[#1b1c1a]/70 hover:translate-x-1 hover:text-[#4338CA] transition-all" href="#">
+<a class="flex items-center gap-4 py-3 px-8 text-[#1b1c1a]/70 hover:translate-x-1 hover:text-[#4338CA] transition-all" href="flow.html" data-nav>
 <span class="material-symbols-outlined" data-icon="route">route</span>
 <span>Sprint Flow</span>
 </a>
-<a class="flex items-center gap-4 py-3 px-8 text-[#1b1c1a]/70 hover:translate-x-1 hover:text-[#4338CA] transition-all" href="#">
+<a class="flex items-center gap-4 py-3 px-8 text-[#1b1c1a]/70 hover:translate-x-1 hover:text-[#4338CA] transition-all" href="summary.html" data-nav>
 <span class="material-symbols-outlined" data-icon="summarize">summarize</span>
 <span>Summary</span>
 </a>
@@ -154,10 +154,10 @@
 <!-- TopNavBar (Shared Component) -->
 <header class="fixed top-0 left-64 right-0 h-16 z-50 bg-[#faf9f5]/80 backdrop-blur-xl flex justify-between items-center px-8 font-['Plus_Jakarta_Sans']">
 <div class="flex items-center gap-2">
-<span class="text-sm font-label tracking-widest text-on-surface-variant uppercase">Project: Mini Sprintbox Pilot</span>
+<span class="text-sm font-label tracking-widest text-on-surface-variant uppercase">Project: <span data-bind="sprint-title">Mini Sprintbox Pilot</span></span>
 </div>
 <div class="flex items-center gap-6">
-<button class="text-[#4338CA] font-semibold text-sm px-4 py-2 hover:bg-[#f5f4f0] transition-colors rounded-full active:scale-95 duration-200">Export</button>
+<button data-export-json class="text-[#4338CA] font-semibold text-sm px-4 py-2 hover:bg-[#f5f4f0] transition-colors rounded-full active:scale-95 duration-200" data-export-json>Export</button>
 <div class="flex items-center gap-2">
 <button class="p-2 text-[#1b1c1a]/60 hover:text-[#1b1c1a] transition-colors rounded-full hover:bg-[#f5f4f0]">
 <span class="material-symbols-outlined" data-icon="settings">settings</span>
@@ -176,7 +176,7 @@
 <section>
 <span class="text-xs font-label text-primary font-bold tracking-[0.2em] uppercase mb-6 block">Sprint Challenge</span>
 <h2 class="headline-text text-5xl lg:text-6xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
-                        Run a <span class="text-primary italic">mini design sprint tomorrow</span> that captures stakeholder input, structures insight fast, and gives the facilitator a clean decision-ready view.
+                        <span data-bind="challenge">Run a mini design sprint tomorrow that captures stakeholder input, structures insight fast, and gives the facilitator a clean decision-ready view.</span>
                     </h2>
 </section>
 <section class="bg-surface-container-low p-10 rounded-xl">
@@ -321,4 +321,5 @@
 <span class="font-bold text-lg">Open Flow Board</span>
 </button>
 </div>
+<script src="app.js"></script>
 </body></html>

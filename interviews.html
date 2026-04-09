@@ -105,7 +105,7 @@
 <button class="material-symbols-outlined p-2 text-[#1b1c1a]/60 hover:bg-[#f5f4f0] rounded-full transition-colors" data-icon="settings">settings</button>
 <button class="material-symbols-outlined p-2 text-[#1b1c1a]/60 hover:bg-[#f5f4f0] rounded-full transition-colors" data-icon="help">help</button>
 </div>
-<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-medium text-sm hover:opacity-90 active:scale-95 duration-200">Export</button>
+<button data-export-json class="bg-primary text-on-primary px-6 py-2 rounded-full font-medium text-sm hover:opacity-90 active:scale-95 duration-200" data-export-json>Export</button>
 </div>
 </nav>
 <!-- SideNavBar (Shared Component) -->
@@ -120,23 +120,23 @@
 <p class="text-xs text-on-surface-variant/60 ml-11">Active Workshop</p>
 </div>
 <nav class="flex-1 space-y-1">
-<a class="flex items-center gap-3 px-6 py-3 text-[#1b1c1a]/70 hover:text-[#4338CA] transition-all group" href="#">
+<a class="flex items-center gap-3 px-6 py-3 text-[#1b1c1a]/70 hover:text-[#4338CA] transition-all group" href="index.html" data-nav>
 <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
 <span>Dashboard</span>
 </a>
-<a class="flex items-center gap-3 px-6 py-3 text-[#1b1c1a]/70 hover:text-[#4338CA] transition-all group" href="#">
+<a class="flex items-center gap-3 px-6 py-3 text-[#1b1c1a]/70 hover:text-[#4338CA] transition-all group" href="personas.html" data-nav>
 <span class="material-symbols-outlined" data-icon="groups">groups</span>
 <span>Personas</span>
 </a>
-<a class="flex items-center gap-3 px-6 py-3 bg-white dark:bg-stone-800 text-[#4338CA] rounded-r-full shadow-sm group" href="#">
+<a class="flex items-center gap-3 px-6 py-3 bg-white dark:bg-stone-800 text-[#4338CA] rounded-r-full shadow-sm group" href="interviews.html" data-nav>
 <span class="material-symbols-outlined" data-icon="record_voice_over" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
 <span class="font-semibold">Pre-Interview</span>
 </a>
-<a class="flex items-center gap-3 px-6 py-3 text-[#1b1c1a]/70 hover:text-[#4338CA] transition-all group" href="#">
+<a class="flex items-center gap-3 px-6 py-3 text-[#1b1c1a]/70 hover:text-[#4338CA] transition-all group" href="flow.html" data-nav>
 <span class="material-symbols-outlined" data-icon="route">route</span>
 <span>Sprint Flow</span>
 </a>
-<a class="flex items-center gap-3 px-6 py-3 text-[#1b1c1a]/70 hover:text-[#4338CA] transition-all group" href="#">
+<a class="flex items-center gap-3 px-6 py-3 text-[#1b1c1a]/70 hover:text-[#4338CA] transition-all group" href="summary.html" data-nav>
 <span class="material-symbols-outlined" data-icon="summarize">summarize</span>
 <span>Summary</span>
 </a>
@@ -156,7 +156,7 @@
 <!-- Main Content Canvas -->
 <main class="ml-64 pt-24 pb-12 px-12 min-h-screen">
 <!-- Header Section -->
-<header class="max-w-6xl mx-auto mb-12">
+<header class="max-w-6xl mx-auto mb-12 flex items-end justify-between gap-8">
 <div class="flex items-center gap-2 mb-4">
 <span class="text-[10px] font-bold tracking-[0.1em] uppercase text-primary bg-primary-fixed px-2 py-1 rounded-full">Phase 01</span>
 <span class="text-outline-variant text-xs">•</span>
@@ -164,9 +164,10 @@
 </div>
 <h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-4">Pre-Interview Signals</h1>
 <p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">A lightweight intake before the live sprint. Capture the strongest expectations, hidden risks and success criteria so the session starts with signal, not warm-up noise.</p>
+<div><button data-add-interview class="bg-primary text-on-primary px-6 py-3 rounded-full font-semibold text-sm hover:opacity-90 active:scale-95 duration-200">Add Input</button></div>
 </header>
 <!-- Bento Grid for Stakeholder Responses -->
-<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" data-interview-grid>
 <!-- Service Owner (Stakeholder Card) -->
 <section class="canvas-card rounded-xl p-8 border border-outline-variant/10 shadow-[0px_12px_32px_rgba(27,28,26,0.03)]">
 <div class="flex items-center gap-4 mb-8">
@@ -352,4 +353,5 @@
 </main>
 <!-- Contextual FAB (Hidden as per rule for Details/Profile screens, but available for interaction) -->
 <!-- Suppression logic: Screen is a Facilitation Cockpit/Details screen, FAB is suppressed -->
+<script src="app.js"></script>
 </body></html>

@@ -1,23 +1,24 @@
+
 # Mini Sprintbox Repo
 
 Static multi-page prototype for a mini design sprint.
 
-## Files
-- `index.html` — dashboard / entry point
-- `personas.html` — core room roles and archetypes
-- `interviews.html` — pre-interview / signal capture
-- `flow.html` — sprint flow board
-- `summary.html` — synthesis / export-style summary
+## What works now
+- page-to-page navigation with relative links
+- local browser storage via `localStorage`
+- add personas
+- add pre-interview inputs
+- add flow notes on the sprint board
+- export the current state as JSON
 
 ## Run locally
-Open `index.html` in a browser.
+Open `index.html`, or for cleaner browser behavior run:
 
-For cleaner navigation in a local dev server, you can also run:
-- `python -m http.server 8000`
-- then open `http://localhost:8000`
+```bash
+python -m http.server 8000
+```
 
-## Notes
-- Preserves the editorial / tactile design language from the Stitch-inspired source screens.
-- Adapted to your mini design sprint context for tomorrow.
-- Static only: no backend, no auth, no shared state across pages yet.
-- Best next step after the pilot: connect pages with a small `app.js` + localStorage.
+Then open `http://localhost:8000`.
+
+## Deploy
+Push the folder to GitHub and host with GitHub Pages or Azure Static Web Apps.
